@@ -30,13 +30,3 @@ async def create_user(user: User):
     users.append(user)
     return {"message": "Usuario agregado con éxito", "user": user}
 
-# Endpoint para obtener a todos los usuarios
-@app.get("/users/", status_code=status.HTTP_200_OK)
-async def get_users():
-    if not users:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="No hay usuarios registrados"
-        )
-    
-    return {"users": users}
