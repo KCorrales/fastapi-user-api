@@ -39,4 +39,5 @@ async def get_users():
             detail="No hay usuarios registrados"
         )
     
+    
     return {"users": users}
