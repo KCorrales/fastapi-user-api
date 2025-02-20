@@ -30,7 +30,7 @@ async def create_user(user: User):
     users.append(user)
     return {"message": "Usuario agregado con éxito", "user": user}
 
-feature-get-user
+#feature-get-user
 # Endpoint para obtener a todos los usuarios
 @app.get("/users/", status_code=status.HTTP_200_OK)
 async def get_users():
